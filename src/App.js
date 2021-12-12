@@ -2,6 +2,7 @@ import React from 'react';
 
 import ContactForm from './components/ContactForm';
 import ContactList from './components/ContactList';
+import Filter from './components/Filter/Filter';
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
       <ContactForm />
       <h2 className="Title">Contacts</h2>
       <div className="Contacts">
+      <Filter />
         <ContactList />
       </div>
     </main>

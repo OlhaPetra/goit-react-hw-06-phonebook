@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import contactsActions from '../../redux/phonebook/phonebook-actions';
-import Filter from '../Filter/Filter';
 import ContactItem from '../ContactItem';
 import s from './ContactList.module.css';
 
@@ -27,8 +26,7 @@ const ContactList = () => {
   const onDeleteContact = id => dispatch(contactsActions.deleteContact(id));
 
   return (
-    <>
-      {visibleContacts.length > 1 && <Filter />}
+    <>      
       <ul className={s.list}>
         {visibleContacts.map(({ id, name, number }) => (
           <li key={id} className={s.item}>
